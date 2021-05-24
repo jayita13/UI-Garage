@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function playVideo(){
+            document.getElementById("vid").play();
+        }        
+        function pauseVideo(){
+            document.getElementById("vid").pause();
+        }        
+        function stopVideo(){
+            document.getElementById("vid").currentTime=0;
+            document.getElementById("vid").pause();
+        }
+    </script>
+</head>
+<body>
+    <video id="vid" preload="auto" width="550" height="400" poster="images/rajani.jpg">
+        <!--in html5 if attribute & value are same then no need to given value-->
+        <source src="media/html5.webm">
+        <source src="media/html5.mp4">
+        <!--whichever matches with browser runs -->
+    </video><br>
+    <button onclick="playVideo()"> Play </button>
+    <button onclick="pauseVideo()"> Pause </button>
+    <button onclick="stopVideo()"> Stop </button>
+
+</body>
+</html>

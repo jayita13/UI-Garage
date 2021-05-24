@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeHandler(ipElement,opElement){
+            document.getElementById(opElement).innerText=ipElement.value;
+        }
+        function changeHandlerOutput(ipElement,opElement){
+            document.getElementById(opElement).value=ipElement.value;
+        }        
+    </script>
+</head>
+<body>
+   <table border="1">
+       <tr>
+            <th>Input Name</th>
+            <th>As rendered by browser</th>
+            <th>Selected value</th>
+       </tr>
+       <tr>
+        <td>Input Text</td>
+        <td>
+            <input type="text" oninput="changeHandler(this,'tiop')">
+        </td>
+        <td><span id="tiop"></span></td>
+       </tr>
+       <tr>
+        <td>Search</td>
+        <td>
+            <input type="search" oninput="changeHandler(this,'siop')">
+        </td>
+        <td><span id="siop"></span></td>
+       </tr>
+       <tr>
+        <td>Color</td>
+        <td>
+            <input type="color" oninput="changeHandler(this,'cio')">
+        </td>
+        <td><span id="cio"></span></td>
+       </tr>
+       <tr>
+        <td>Range</td>
+        <td>
+            <input type="range" oninput="changeHandler(this,'rio')">
+        </td>
+        <td><span id="rio"></span></td>
+       </tr>
+       <tr>
+        <td>Time</td>
+        <td>
+            <input type="time" oninput="changeHandler(this,'timeop')" >
+        </td>
+        <td><span id="timeop"></span></td>
+       </tr>
+       <tr>
+        <td>Date</td>
+        <td>
+            <input type="date" oninput="changeHandler(this,'dateop')">
+        </td>
+        <td><span id="dateop"></span></td>
+       </tr>
+       <tr>
+        <td>Date & Time</td>
+        <td>
+            <input type="datetime" oninput="changeHandler(this,'dtop')">
+        </td>
+        <td><span id="dtop"></span></td>
+       </tr>
+       <tr>
+        <td>Week</td>
+        <td>
+            <input type="week" oninput="changeHandler(this,'weekop')">
+        </td>
+        <td><span id="weekop"></span></td>
+       </tr>
+       <tr>
+        <td>Month</td>
+        <td>
+            <input type="month" oninput="changeHandler(this,'monthop')">
+        </td>
+        <td><span id="monthop"></span></td>
+       </tr>
+       <tr>
+        <td>Number</td>
+        <td>
+            <input type="number" oninput="changeHandler(this,'numop')">
+        </td>
+        <td><span id="numop"></span></td>
+       </tr>
+       <tr>
+        <td>eMail</td>
+        <td>
+            <input type="email" oninput="changeHandler(this,'mailop')">
+        </td>
+        <td><span id="mailop"></span></td>
+       </tr>
+       <tr>
+        <td>Telephone</td>
+        <td>
+            <input type="telephone" oninput="changeHandler(this,'telop')">
+        </td>
+        <td><span id="telop"></span></td>
+       </tr>
+       <tr>
+        <td>URL</td>
+        <td>
+            <input type="url" oninput="changeHandler(this,'urlop')">
+        </td>
+        <td><span id="urlop"></span></td>
+       </tr>
+       <tr>
+           <td> Text </td>
+           <td> <input type="url" oninput="changeHandlerOutput(this,'op')"></td>
+           <td> <output id="op"></output></td>
+       </tr>
+       <tr>
+           <td> Progress </td>
+           <td><input type="range" min="0" max="1" step="0.01" oninput="changeHandlerOutput(this,'prop')"></td>
+           <td><progress id="prop" value="0.5"></progress></td>
+        </tr>
+        <tr>
+            <td> Meter </td>
+            <td> <meter low="0.3" high="0.7" optimum="0.2" value="0.8"></meter></td>
+            <!--red when value lower than low & value higher than high-->
+        </tr>
+   </table>
+</body>
+</html>
